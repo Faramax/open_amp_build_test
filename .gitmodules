@@ -1,0 +1,6 @@
+[submodule "libmetal"]
+	path = libmetal
+	url = git@github.com:Faramax/libmetal.git
+[submodule "open-amp"]
+	path = open-amp
+	url = git@github.com:Faramax/open-amp.git
