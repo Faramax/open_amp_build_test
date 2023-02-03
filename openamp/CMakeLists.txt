@@ -34,26 +34,9 @@ target_include_directories(
 )
 target_link_libraries(
    openamp INTERFACE
-   ${AMP_LIB}
-   ${METAL_LIB}
-#   metal
-#   open_amp
    HAL::STM32::MP1
    HAL::STM32::MP1::IPCC
-#   mcu_hal
-#   mcu_libc
+   ${AMP_LIB}
+   ${METAL_LIB}
 )
 target_compile_options(openamp INTERFACE -Wno-unused-parameter -Wno-empty-body -Wno-error -Wno-format)
-
-
-add_library(cpp_amp INTERFACE IMPORTED GLOBAL)
-target_sources(cpp_amp INTERFACE
-   rpmsg.cpp
-   rpmsg.hpp
-   printf.cpp
-   printf.hpp
-)
-target_link_libraries(cpp_amp INTERFACE
-#   mcu_driver
-   openamp
-)

@@ -4,3 +4,6 @@
 [submodule "open-amp"]
 	path = open-amp
 	url = git@github.com:Faramax/open-amp.git
+[submodule "stm32-cmake"]
+	path = stm32-cmake
+	url = git@github.com:Faramax/stm32-cmake.git

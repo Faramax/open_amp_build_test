@@ -1,10 +1,10 @@
-project(hello_world.c)
+project(hello_world)
 cmake_minimum_required(VERSION 3.20)
 
 set(STM32)
 set(STM32_FAMILY "STM32MP1")
 find_package(CMSIS COMPONENTS STM32MP157AA)
-find_package(HAL COMPONENTS STM32MP1 REQUIRED)
+find_package(HAL   COMPONENTS STM32MP1 REQUIRED)
 add_compile_definitions(CORE_CM4)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -33,7 +33,7 @@ set(SOURCES
 )
 add_executable(mt_hello_world ${SOURCES})
 target_link_libraries(mt_hello_world
-   cpp_amp
+   openamp
    mcu_hal
    mcu_libc
 )
