@@ -1,9 +1,5 @@
-set(ARM_TOOLS_PATH           "/home/sergey/projects/developUTC/source/arm-tools")
-set(STM32_CUBE_MP1_PATH      "${ARM_TOOLS_PATH}/STM32CubeMP1")
-
-set(STM32_TOOLCHAIN_PATH     "${ARM_TOOLS_PATH}/gcc")
+set(STM32_CUBE_MP1_PATH      "/home/sergey/projects/developUTC/source/arm-tools/STM32CubeMP1")
 set(CROSS_PREFIX             "${STM32_TOOLCHAIN_PATH}/bin/arm-none-eabi-")
-set(CMAKE_SYSROOT            "${STM32_TOOLCHAIN_PATH}/arm-none-eabi/")
 
 set(CMAKE_C_CXX_COMMON_FLAGS  "-Wno-unused-variable -Wno-unused-parameter -Wno-psabi -Wno-deprecated-declarations")
 set(CMAKE_C_FLAGS             "${CMAKE_C_CXX_COMMON_FLAGS}") #${STM32_FLAGS}
