@@ -1,12 +1,12 @@
 if(NOT STM32_CUBE_PATH)
    message(FATAL_ERROR "There is no STM32_CUBE_PATH specified")
 endif()
-set(OPEN_AMP_PATH "${STM32_CUBE_PATH}/Middlewares/Third_Party/OpenAMP")
+set(OPEN_AMP_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../")
 
-set(METAL_LIB           ${OPEN_AMP_PATH}/libmetal/install/m4-generic-release/usr/local/lib/libmetal.a)
-set(METAL_INCLUDE_DIR   ${OPEN_AMP_PATH}/libmetal/install/m4-generic-release/usr/local/include)
-set(AMP_LIB             ${OPEN_AMP_PATH}/open-amp/install/m4-generic-release/usr/local/lib/libopen_amp.a)
-set(AMP_INCLUDE_DIR     ${OPEN_AMP_PATH}/open-amp/install/m4-generic-release/usr/local/include)
+set(METAL_LIB           ${OPEN_AMP_PATH}/libmetal/install/usr/local/lib/libmetal.a)
+set(METAL_INCLUDE_DIR   ${OPEN_AMP_PATH}/libmetal/install/usr/local/include)
+set(AMP_LIB             ${OPEN_AMP_PATH}/open-amp/install/usr/local/lib/libopen_amp.a)
+set(AMP_INCLUDE_DIR     ${OPEN_AMP_PATH}/open-amp/install/usr/local/include)
 
 add_library(openamp INTERFACE IMPORTED GLOBAL)
 target_sources(openamp INTERFACE
